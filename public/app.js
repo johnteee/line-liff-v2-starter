@@ -38,6 +38,12 @@ const WeatherComponent = {
         <div v-if="element.elementName == 'WDSD'">
           風速: {{ element.elementValue.value }}m/s
         </div>
+        <div v-if="element.elementName == 'H_UVI'">
+          紫外線UVI: {{ element.elementValue.value }}
+        </div>
+        <div v-if="element.elementName == '24R'">
+          雨量: {{ element.elementValue.value }}mm/day
+        </div>
       </div>
 
       <br>
