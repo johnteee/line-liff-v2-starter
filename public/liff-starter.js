@@ -95,6 +95,8 @@ function displayLiffData() {
     window.liffInfo['isLoggedIn'] = liff.isLoggedIn();
     window.liffInfo['deviceOS'] = liff.getOS();
 
+    eventBus.updateSignalForLIFF = Date.now()
+
     document.getElementById('browserLanguage').textContent = liff.getLanguage();
     document.getElementById('sdkVersion').textContent = liff.getVersion();
     document.getElementById('lineVersion').textContent = liff.getLineVersion();

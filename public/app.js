@@ -1,3 +1,11 @@
+const eventBus = new Vue({
+  data() {
+    return {
+      updateSignalForLIFF: 0,
+    }
+  },
+})
+
 const NotfoundComponent = {
 	template: '<h1>Not found</h1>'
 };
@@ -13,6 +21,8 @@ const HomeComponent = {
   `,
   methods: {
     getLiffInfo() {
+      eventBus.updateSignalForLIFF
+
       return window.liffInfo
     },
   },
