@@ -14,9 +14,8 @@ const HomeComponent = {
 	template: `
   <div>
     <h1>Home</h1>
-    {{ getLiffInfo() }}
     <div v-if="getLiffInfo()">
-      <div v-for="infoKey in Object.keys(getLiffInfo())" :key="infoKey">{{ infoKey }}: {{ getLiffInfo[infoKey] }}</div><br>
+      <div v-for="infoKey in Object.keys(getLiffInfo())" :key="infoKey">{{ infoKey }}: {{ getLiffInfo()[infoKey] }}</div><br>
     </div>
   </div>
   `,

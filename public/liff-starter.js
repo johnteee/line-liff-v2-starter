@@ -53,6 +53,8 @@ function initializeLiff(myLiffId) {
             liffId: myLiffId
         })
         .then(() => {
+            liff.$hand.changeHash();
+
             // start to use LIFF's api
             initializeApp();
 
