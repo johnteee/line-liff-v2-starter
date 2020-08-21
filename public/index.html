@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+      <div id="liffOld">
         <div id="liffAppContent">
             <!-- ACTION BUTTONS -->
             <div class="buttonGroup">
@@ -138,7 +139,19 @@
         <div id="nodeLiffIdErrorMessage" class="hidden">
             <p>Unable to receive the LIFF ID as an environment variable.</p>
         </div>
-        <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-        <script src="liff-starter.js"></script>
+      </div>
+
+      <div id="vue-app">
+        <router-link to="/">home</router-link>
+        <router-link to="/weather">Weather</router-link>
+        <!-- <router-link to="/something">no route</router-link> -->
+        <router-view></router-view>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+      <script src="app.js"></script>
+      <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+      <script src="liff-starter.js"></script>
     </body>
 </html>

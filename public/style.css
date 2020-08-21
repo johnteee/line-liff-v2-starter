@@ -21,9 +21,9 @@ table, th, td {
     border: 1px solid black;
 }
 
-img { 
-    max-width: 25%; 
-    height: auto; 
+img {
+    max-width: 25%;
+    height: auto;
 }
 
 button {
@@ -66,4 +66,9 @@ button {
 
 .hidden {
     display: none;
+}
+
+#liffOld {
+  display: none;
+  height: 0px;
 }
