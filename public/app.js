@@ -7,18 +7,11 @@ const eventBus = new Vue({
 })
 
 const NotfoundComponent = {
-	template: '<h1>Not found</h1>'
-};
-
-const HomeComponent = {
 	template: `
   <div>
-    <h1>Home</h1>
+    <h1>Not found</h1>
     <div>
       當前網址: {{ currentURL() }}
-    </div>
-    <div v-if="getLiffInfo()">
-      <div v-for="infoKey in Object.keys(getLiffInfo())" :key="infoKey">{{ infoKey }}: {{ getLiffInfo()[infoKey] }}</div><br>
     </div>
   </div>
   `,
@@ -26,6 +19,19 @@ const HomeComponent = {
     currentURL() {
       return window.location.href
     },
+  },
+};
+
+const HomeComponent = {
+	template: `
+  <div>
+    <h1>Home</h1>
+    <div v-if="getLiffInfo()">
+      <div v-for="infoKey in Object.keys(getLiffInfo())" :key="infoKey">{{ infoKey }}: {{ getLiffInfo()[infoKey] }}</div><br>
+    </div>
+  </div>
+  `,
+  methods: {
     getLiffInfo() {
       eventBus.updateSignalForLIFF
 
